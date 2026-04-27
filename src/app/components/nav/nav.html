@@ -1,0 +1,27 @@
+<nav class="nav" [class.scrolled]="scrolled()">
+  <div class="nav-inner">
+    <div class="logo font-mono">
+      <span class="dim">&lt;</span>dev<span class="dim">/&gt;</span>
+    </div>
+
+    <ul class="nav-links">
+      @for (link of links; track link.href) {
+        <li>
+          <a class="nav-link" (click)="scrollTo(link.href)">{{ link.label }}</a>
+        </li>
+      }
+    </ul>
+
+    <button class="hamburger" (click)="toggleMenu()" [attr.aria-expanded]="menuOpen()">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+
+  @if (menuOpen()) {
+    <div class="mobile-menu">
+      @for (link of links; track link.href) {
+        <a class="mobile-link" (click)="scrollTo(link.href)">{{ link.label }}</a>
+      }
+    </div>
+  }
+</nav>

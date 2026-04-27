@@ -1,0 +1,42 @@
+<section id="hero" class="hero">
+  <div class="hero-inner">
+    <!-- Text side -->
+    <div class="hero-text">
+      <p class="greeting font-mono anim-fade">
+        <span class="dim">// </span>Hello World, I'm
+      </p>
+      <h1 class="hero-name anim-fade-d1">{{ portfolio.name }}</h1>
+      <p class="hero-tagline anim-fade-d2">{{ portfolio.tagline }}</p>
+      <p class="hero-desc anim-fade-d3">{{ portfolio.description }}</p>
+      <div class="hero-actions anim-fade-d4">
+        <a class="btn-primary" (click)="scrollTo('#projects')">View Projects</a>
+        <a class="btn-outline" (click)="scrollTo('#contact')">Contact Me</a>
+      </div>
+    </div>
+
+    <!-- Terminal card -->
+    <div class="terminal-wrap anim-fade-d5">
+      <div class="terminal-card">
+        <div class="terminal-header">
+          <span class="dot red"></span>
+          <span class="dot yellow"></span>
+          <span class="dot green"></span>
+        </div>
+        <div class="terminal-body font-mono">
+          <div><span class="prompt">$</span> cat skills.json</div>
+          <div class="mt-2 dim">&#123;</div>
+          <div>&nbsp;&nbsp;<span class="key">"backend"</span>: <span class="val">"Spring Boot"</span>,</div>
+          <div>&nbsp;&nbsp;<span class="key">"frontend"</span>: <span class="val">"Angular 20"</span>,</div>
+          <div>&nbsp;&nbsp;<span class="key">"database"</span>: <span class="val">"PostgreSQL"</span>,</div>
+          <div>&nbsp;&nbsp;<span class="key">"devops"</span>: <span class="val">"Docker"</span>,</div>
+          <div>&nbsp;&nbsp;<span class="key">"arch"</span>: <span class="val">"Microservices"</span></div>
+          <div class="dim">&#125;</div>
+          <div class="mt-2">
+            <span class="prompt">$</span>
+            <span class="cursor" [class.visible]="cursorVisible">&nbsp;</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

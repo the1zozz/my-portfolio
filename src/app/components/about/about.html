@@ -1,0 +1,39 @@
+<section id="about" class="about-section">
+  <div class="container">
+    <p class="section-label"><span class="num">01. </span>About Me</p>
+    <h2 class="section-title">Who I Am</h2>
+
+    <div class="about-grid">
+      <div class="about-text-col">
+        <p class="about-text">{{ portfolio.aboutText }}</p>
+
+        <div class="stats-row">
+          <div class="stat card">
+            <span class="stat-num">{{ portfolio.yearsExp }}</span>
+            <span class="stat-label">Years Experience</span>
+          </div>
+          <div class="stat card">
+            <span class="stat-num">{{ portfolio.projectsCount }}</span>
+            <span class="stat-label">Projects Completed</span>
+          </div>
+          <div class="stat card">
+            <span class="stat-num">2</span>
+            <span class="stat-label">Microservice Platforms</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="capabilities card">
+        <p class="cap-title font-mono">// What I do best</p>
+        <ul class="cap-list">
+          @for (cap of capabilities; track cap.label) {
+            <li class="cap-item">
+              <span class="cap-icon">{{ cap.icon }}</span>
+              <span class="cap-label">{{ cap.label }}</span>
+            </li>
+          }
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>

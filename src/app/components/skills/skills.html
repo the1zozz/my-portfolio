@@ -1,0 +1,21 @@
+<section id="skills" class="skills-section">
+  <div class="container">
+    <p class="section-label"><span class="num">02. </span>Tech Stack</p>
+    <h2 class="section-title">Skills &amp; Technologies</h2>
+
+    <div class="groups">
+      @for (group of portfolio.skillGroups; track group.title) {
+        <div class="group">
+          <h3 class="group-title" [class]="'color-' + group.color">
+            {{ group.title }}
+          </h3>
+          <div class="pills">
+            @for (skill of group.skills; track skill.label) {
+              <span class="pill" [class]="'pill-' + group.color">{{ skill.label }}</span>
+            }
+          </div>
+        </div>
+      }
+    </div>
+  </div>
+</section>

@@ -1,0 +1,53 @@
+.skills-section { padding: 5rem 1.5rem; }
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.groups {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+
+.group-title {
+  font-size: 1.05rem;
+  font-weight: 600;
+  margin-bottom: .9rem;
+  &.color-green { color: var(--accent); }
+  &.color-blue  { color: var(--blue); }
+  &.color-yellow{ color: var(--yellow); }
+}
+
+.pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .6rem;
+}
+
+.pill {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: .75rem;
+  padding: .4rem 1rem;
+  border-radius: 999px;
+  cursor: default;
+  transition: transform .2s;
+  &:hover { transform: scale(1.08); }
+
+  &.pill-green {
+    background: #0d2818;
+    color: var(--accent);
+    border: 1px solid rgba(0,255,136,.25);
+  }
+  &.pill-blue {
+    background: #0d1a2e;
+    color: var(--blue);
+    border: 1px solid rgba(59,130,246,.25);
+  }
+  &.pill-yellow {
+    background: #1a1800;
+    color: var(--yellow);
+    border: 1px solid rgba(254,188,46,.25);
+  }
+}

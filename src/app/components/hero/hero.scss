@@ -1,0 +1,105 @@
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  padding: 100px 1.5rem 60px;
+}
+
+.hero-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+  flex-wrap: wrap;
+}
+
+.hero-text { flex: 1; min-width: 280px; }
+
+.greeting {
+  font-size: .85rem;
+  color: var(--accent);
+  .dim { color: var(--text-dim); }
+}
+
+.hero-name {
+  font-size: clamp(2.4rem, 6vw, 4.2rem);
+  font-weight: 800;
+  color: var(--text);
+  line-height: 1.1;
+  margin-top: .6rem;
+}
+
+.hero-tagline {
+  font-size: clamp(1.1rem, 2.5vw, 1.4rem);
+  font-weight: 600;
+  color: var(--accent);
+  margin-top: .4rem;
+}
+
+.hero-desc {
+  color: var(--text-muted);
+  font-size: 1rem;
+  line-height: 1.7;
+  max-width: 520px;
+  margin-top: 1.2rem;
+}
+
+.hero-actions {
+  display: flex;
+  gap: 1rem;
+  margin-top: 2rem;
+  flex-wrap: wrap;
+}
+
+/* Terminal */
+.terminal-wrap {
+  flex-shrink: 0;
+  background: linear-gradient(135deg, var(--accent) 0%, #0066ff 100%);
+  border-radius: 14px;
+  padding: 2px;
+  animation: pulse-glow 3s ease infinite;
+}
+
+.terminal-card {
+  background: var(--surface2);
+  border-radius: 12px;
+  padding: 1.25rem;
+  min-width: 270px;
+}
+
+.terminal-header {
+  display: flex;
+  gap: 6px;
+  margin-bottom: 1rem;
+}
+
+.dot {
+  width: 12px; height: 12px;
+  border-radius: 50%;
+  &.red    { background: #ff5f57; }
+  &.yellow { background: #febc2e; }
+  &.green  { background: #28c840; }
+}
+
+.terminal-body {
+  font-size: .78rem;
+  line-height: 1.8;
+  color: var(--text-dim);
+
+  .prompt { color: var(--accent); }
+  .dim    { color: var(--text-dim); }
+  .key    { color: var(--yellow); }
+  .val    { color: var(--accent); }
+  .mt-2   { margin-top: .5rem; }
+}
+
+.cursor {
+  display: inline-block;
+  width: 8px; height: 14px;
+  background: transparent;
+  vertical-align: middle;
+  transition: background .1s;
+  &.visible { background: var(--accent); }
+}
